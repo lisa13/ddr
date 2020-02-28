@@ -1,0 +1,28 @@
+@import "../../../../src/assets/colors.scss";
+
+.container {
+  background: #333;
+  height: 50px;
+
+  .square {
+    width: 60px;
+    background: $primary_bg;
+    height: inherit;
+  }
+
+  .actions {
+    width: 150px;
+
+    .img-container {
+      background: #fff;
+      height: 33px;
+      width: 33px;
+      margin-bottom: 2px;
+      border-radius: 50%;
+    }
+  }
+
+  i {
+    color: #fff;
+  }
+}

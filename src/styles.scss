@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "../src/assets/fonts.scss";
+@import "../src/assets/colors.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
+html {
+  height: 100%;
+
+  body {
+    height: 100%;
+    font-family: $nsd_regular;
+    color: $text-color;
+    position: relative;
+  }
+}
+
+// custom margin-padding md size 16px
+
+.margin {
+  margin: 1rem;
+}
+
+.margin-top {
+  margin-top: 1rem;
+}
+
+.margin-right {
+  margin-right: 1rem;
+}
+
+.margin-bottom {
+  margin-bottom: 1rem;
+}
+
+.margin-left {
+  margin-left: 1rem;
+}
+
+.padding {
+  padding: 1rem;
+}
+
+.padding-top {
+  padding-top: 1rem;
+}
+
+.padding-right {
+  padding-right: 1rem;
+}
+
+.padding-bottom {
+  padding-bottom: 1rem;
+}
+
+.padding-left {
+  padding-left: 1rem;
+}

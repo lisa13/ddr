@@ -1,0 +1,47 @@
+@import "../../../../src/assets/colors.scss";
+@import "../../../../src/assets/fonts.scss";
+
+.container {
+  height: 45px;
+  background: $grey_light;
+
+  div{
+    height: inherit;
+  }
+
+  i {
+    font-size: 20px;
+    margin: 1px;
+  }
+
+  a {
+    display: inline-block;
+    height: 45px;
+    color: #333;
+    font-size: 15px;
+    font-family: $nsd_light;
+  }
+
+  .left-actions {
+    width: 300px;
+    min-width: 300px;
+    i {
+      color: $primary_color;
+    }
+  }
+
+  .right-actions {
+    width: 260px;
+    min-width: 260px;
+
+    .preview {
+      color: $primary_color !important;
+    }
+    .delete {
+      color: $red;
+    }
+    .save {
+      color: $green;
+    }
+  }
+}
