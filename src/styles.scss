@@ -34,7 +34,7 @@ html {
 }
 
 .label {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 100;
 }
 
@@ -85,4 +85,24 @@ html {
 
 .padding-left {
   padding-left: 1rem;
+}
+
+
+//overriding material design
+
+.mat-form-field-wrapper{
+  padding-bottom: 0.8rem!important;
+}
+
+mat-form-field{
+  &.select{
+    max-width: 120px;
+  }
+
+  &.datepicker{
+       width: 100px;
+      .mat-datepicker-toggle-default-icon{
+        height: 15px!important;
+      }
+  }
 }

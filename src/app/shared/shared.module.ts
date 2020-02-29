@@ -4,11 +4,15 @@ import { RouterModule } from "@angular/router";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from "@angular/platform-browser";
+import { ReactiveFormsModule } from '@angular/forms';
+
+//material modules
 import { MatIconModule } from "@angular/material/icon";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatNativeDateModule } from "@angular/material/core";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { MatSelectModule } from '@angular/material/select';
 
 import {
   HeaderComponent,
@@ -31,22 +35,26 @@ import {
     RouterModule,
     BrowserAnimationsModule,
     BrowserModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule
   ],
   exports: [
     // modules
     BrowserAnimationsModule,
     BrowserModule,
+    ReactiveFormsModule,
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSelectModule,
     // components
     HeaderComponent,
     ReportsComponent,
@@ -54,4 +62,4 @@ import {
     ActionsComponent
   ]
 })
-export class SharedModule {}
+export class SharedModule { }

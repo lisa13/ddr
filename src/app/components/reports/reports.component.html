@@ -1,1 +1,26 @@
-<p>reports works!</p>
+<div class="container" fxLayout="row" fxLayoutAlign="start center" fxLayout.xs="column">
+
+    <div class="last-report" fxLayout="row" fxLayoutAlign="start center">
+        <h3 class="label">Last Report</h3>
+        <span class="text">{{lastReport}}</span>
+    </div>
+
+    <div class="rep-number" fxLayout="row" fxLayoutAlign="start center">
+        <h3 class="label">Report Number</h3>
+        <mat-form-field appearance="none" class="text select">
+            <select matNativeControl required>
+                <option value="volvo">44 - 29.03.2019</option>
+                <option value="saab">43 - 29.03.2019</option>
+            </select>
+        </mat-form-field>
+    </div>
+
+    <div class="change-date" fxLayout="row" fxLayoutAlign="start center">
+        <h3 class="label">Report Number</h3>
+        <mat-form-field appearance="none" class="text datepicker">
+            <input matInput  [formControl]="customDate" [matDatepicker]="picker" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+    </div>
+</div>
