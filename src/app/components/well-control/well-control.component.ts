@@ -7,7 +7,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
   styleUrls: ['./well-control.component.scss']
 })
 export class WellControlComponent implements OnInit {
-
+public title="Well Control".toLocaleUpperCase();
   constructor() { }
 
   ngOnInit(): void {

@@ -1,8 +1,44 @@
-<p>well-control works!</p>
-<div>
-    <mat-form-field>
-      <input matInput [matDatepicker]="picker" />
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-  </div>
+<div class="container">
+
+    <div class="header" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="title margin-left" fxFlex="30">{{title}}</div>
+
+
+        <div class="actions margin-right" fxLayout="row" fxLayoutAlign="space-around center">
+            <div class="add">
+                <a href="" fxLayout="row" fxLayoutAlign="space-between center">
+                    <i class="material-icons">
+                        add
+                    </i>
+                    Create
+                </a>
+            </div>
+            <div class="edit">
+                <a href="" fxLayout="row" fxLayoutAlign="space-between center">
+                    <i class="material-icons">
+                        create
+                    </i>
+                    Edit
+                </a>
+            </div>
+            <div class="test">
+                <a href="" fxLayout="row" fxLayoutAlign="space-between center">
+                    <i class="material-icons">
+                        arrow_upward
+                    </i>
+                    Test
+                </a>
+            </div>
+            <div *ngIf="" class="status">
+                <i class="material-icons green">
+                    done_all
+                </i>
+            </div>
+            <div  class="status">
+                <i class="material-icons">
+                    warning
+                </i>
+            </div>
+        </div>
+    </div>
+</div>

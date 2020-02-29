@@ -18,7 +18,8 @@ import {
   HeaderComponent,
   ReportsComponent,
   NavbarComponent,
-  ActionsComponent
+  ActionsComponent,
+  WellControlComponent
 } from "../components";
 
 @NgModule({
@@ -27,7 +28,8 @@ import {
     HeaderComponent,
     ReportsComponent,
     NavbarComponent,
-    ActionsComponent
+    ActionsComponent,
+    WellControlComponent
   ],
   providers: [],
   imports: [
@@ -59,7 +61,8 @@ import {
     HeaderComponent,
     ReportsComponent,
     NavbarComponent,
-    ActionsComponent
+    ActionsComponent,
+    WellControlComponent
   ]
 })
 export class SharedModule { }

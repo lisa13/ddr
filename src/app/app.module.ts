@@ -5,10 +5,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HomeModule } from "./home/home.module";
 import { SharedModule } from "./shared/shared.module";
-import { WellControlComponent } from './components/well-control/well-control.component';
 
 @NgModule({
-  declarations: [AppComponent, WellControlComponent],
+  declarations: [AppComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

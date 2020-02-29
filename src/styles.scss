@@ -29,7 +29,11 @@ html {
   font-weight: 100;
   font-size: 16px;
   &.white {
-    color: #fff;
+    font-size: 16px;
+  }
+
+  @media only screen and (max-width: 640px) {
+    font-size: 15px;
   }
 }
 
@@ -42,7 +46,6 @@ html {
   font-size: 14px;
   font-family: $nsd_light;
   color: $grey_medium;
-
 }
 
 // custom margin-padding md size 16px
@@ -87,22 +90,21 @@ html {
   padding-left: 1rem;
 }
 
-
 //overriding material design
 
-.mat-form-field-wrapper{
-  padding-bottom: 0.8rem!important;
+.mat-form-field-wrapper {
+  padding-bottom: 0.8rem !important;
 }
 
-mat-form-field{
-  &.select{
+mat-form-field {
+  &.select {
     max-width: 120px;
   }
 
-  &.datepicker{
-       width: 100px;
-      .mat-datepicker-toggle-default-icon{
-        height: 15px!important;
-      }
+  &.datepicker {
+    width: 100px;
+    .mat-datepicker-toggle-default-icon {
+      height: 15px !important;
+    }
   }
 }
