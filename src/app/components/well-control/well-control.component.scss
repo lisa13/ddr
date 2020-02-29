@@ -2,14 +2,20 @@
 @import "../../../../src/assets/fonts.scss";
 
 .container {
-    margin: 0 1rem 0 1rem;
-    @media only screen and (max-width: 599px) {
-        margin:0;
-      }
+  height: 55px;
+  margin: 0 1rem 0 1rem;
+  @media only screen and (max-width: 599px) {
+    margin: 0;
+  }
 
   .header {
     background: $primary_bg;
     color: #fff;
+
+    .title {
+      cursor: pointer;
+    }
+   
     i {
       font-size: 20px;
       margin: 3px;
@@ -27,12 +33,12 @@
       }
     }
 
-    .actions{
-        max-width: 200px;
-        .green{
-            color: $green;
-            font-size: 30px;
-        }
+    .actions {
+      max-width: 200px;
+      .green {
+        color: $green;
+        font-size: 30px;
+      }
     }
   }
 }

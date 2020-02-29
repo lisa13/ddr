@@ -48,6 +48,15 @@ html {
   color: $grey_medium;
 }
 
+// undelined div's color from colors.scss
+.underlined{
+  @extend .underline;
+}
+
+.full-width{
+  width: 100%;
+}
+
 // custom margin-padding md size 16px
 
 .margin {
@@ -90,7 +99,7 @@ html {
   padding-left: 1rem;
 }
 
-//overriding material design
+//overriding material form designs
 
 .mat-form-field-wrapper {
   padding-bottom: 0.8rem !important;

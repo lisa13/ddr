@@ -5,6 +5,11 @@ $green: #47bd94;
 $red: #f44336;
 $primary_bg: #276699;
 $primary_color: #276699;
-$secondary_bg: #22669d;
+$secondary_bg: #337ebb;
 $text-color: $grey-dark;
 $underline: #e4e6e6;
+
+
+.underline{
+    border-bottom: 1px solid $underline;
+}
