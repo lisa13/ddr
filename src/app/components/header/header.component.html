@@ -1,5 +1,19 @@
-<div class="container">
-    <div>
-        
+<div class="container" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="column">
+    <div class="title" fxLayout="row" fxLayoutAlign="space-around center">
+        <div>
+            <h3 class="title">
+                {{title}}
+            </h3>
+        </div>
     </div>
-</div>
+
+    <div class="platform" fxLayout="row" fxLayoutAlign="space-around center">
+        <div  fxLayout="row" fxLayoutAlign="space-between center" >
+           <h3 class="label">Platform</h3>
+           <span class="text">{{platform}}</span>
+        </div>
+        <div  fxLayout="row" fxLayoutAlign="space-evenly center" >
+           <h3 class="label">Well</h3>
+           <span class="text">{{well}}</span>
+        </div>
+    </div>
