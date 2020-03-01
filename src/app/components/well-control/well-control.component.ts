@@ -11,10 +11,6 @@ export class WellControlComponent implements OnInit {
   public title = "Well Control".toUpperCase();
   public toggle: boolean;
   public dt =  new Date().toISOString().split('T')[0];
-
-
-
-  //form controls
   public wellControlForm: FormGroup;
   public bopTest: FormControl;
   public pressureTest: FormControl;

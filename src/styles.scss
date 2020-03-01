@@ -48,6 +48,10 @@ html {
   color: $grey_medium;
 }
 
+.primary{
+  color: $primary_color;
+}
+
 // undelined div's color from colors.scss
 .underlined {
   @extend .underline;
@@ -124,3 +128,4 @@ mat-form-field {
     }
   }
 }
+

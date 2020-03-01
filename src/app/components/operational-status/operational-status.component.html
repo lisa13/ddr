@@ -4,42 +4,158 @@
     </div>
 </div>
 
-<div class="content margin"  fxLayout="column" fxLayoutAlign="space-between center">
+<div class="content margin" fxLayout="column" fxLayoutAlign="space-between center">
+    <form class="full-width" [formGroup]="operationalStatusForm" novalidate>
 
-    <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
-        <div>1</div>
-        <div>2</div>
-    </div>
 
-    <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
-        <div>1</div>
-        <div>2</div>
-    </div>
+        <!-- first row -->
+        <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">Status @06:00 hours (29.03.2019)</h3>
+                <mat-form-field class="text" appearance="none">
+                    <input matInput [formControl]="status">
+                </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">Days Ahead/Behind</h3>
+                <mat-form-field class="text" appearance="none">
+                    <input matInput [formControl]="days">
+                </mat-form-field>
+            </div>
+        </div>
 
-    <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-    </div>
 
-    <div class="full-width" fxLayout="row" fxLayoutAlign="space-between center">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-    </div>
+        <!-- second row -->
+        <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">Well Class</h3>
+                <mat-form-field class="text" appearance="none">
+                    <input matInput [formControl]="wellClass">
+                </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">Length OH Sect (m)</h3>
+                <mat-form-field class="text" appearance="none">
+                    <input matInput [formControl]="lengthOh">
+                </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">Midnight Depth (m)</h3>
+                <mat-form-field class="text" appearance="none">
+                    <input matInput [formControl]="midnightDepth">
+                </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">Progress (00-24)-(m)</h3>
+                <mat-form-field class="text" appearance="none">
+                    <input matInput [formControl]="progress">
+                </mat-form-field>
+            </div>
+        </div>
 
-    <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-    </div>
+        <!-- third row -->
+        <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="rep-number" fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">Section</h3>
+                <mat-form-field appearance="none" class="text select">
+                    <select matNativeControl required>
+                        <option value="test1">8 1/2</option>
+                        <option value="test2">9 1/2</option>
+                    </select>
+                </mat-form-field>
+            </div>
 
-    <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
-        <div>1</div>
-        <div class="text">Mark as complete</div>
-    </div>
+            <div fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">Start Time</h3>
+                <mat-form-field class="text" appearance="none">
+                    <input matInput [formControl]="startTime">
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="column" fxLayoutAlign="end start">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <div xLayout="row" fxLayoutAlign="start center">
+                        <h3 class="label margin ">FIT</h3>
+                        <mat-checkbox class="text"></mat-checkbox>
+                    </div>
+                    <div xLayout="row" fxLayoutAlign="start center">
+                        <h3 class="label margin ">LOT</h3>
+                        <mat-checkbox class="text"></mat-checkbox>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <mat-form-field class="text" appearance="none">
+                        <input matInput [formControl]="fitLot">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div fxLayout="column" fxLayoutAlign="end start ">
+                <h3 class="label">Start Depth. (m MD)</h3>
+                <mat-form-field class="text" appearance="none">
+                    <input matInput [formControl]="startDepth">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <!-- fourth row -->
+        <div class="underline full-width" fxLayout="row" fxLayoutAlign="space-between center">
+            
+            <div fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">Last Casing ( m-TVD, m-MD)</h3>
+                <mat-form-field class="text" appearance="none">
+                    <input matInput [formControl]="lastCasing">
+                </mat-form-field>
+            </div>
+
+            <div class="rep-number" fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">DIM</h3>
+                <mat-form-field appearance="none" class="text select">
+                    <select matNativeControl required>
+                        <option value="test1">10 3/4</option>
+                        <option value="test2">10 1/2</option>
+                    </select>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">Mud Type</h3>
+                <mat-form-field class="text" appearance="none">
+                    <input matInput [formControl]="mudType">
+                </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">ECD (SG)</h3>
+                <mat-form-field class="text" appearance="none">
+                    <input matInput [formControl]="ecd">
+                </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">MW Out (SG)</h3>
+                <mat-form-field class="text" appearance="none">
+                    <input matInput [formControl]="mwOut">
+                </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">MW In (SG)</h3>
+                <mat-form-field class="text" appearance="none">
+                    <input matInput [formControl]="mwIn">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="full-width" fxLayout="row" fxLayoutAlign="space-between center">
+            <div>
+                <h3 class="label">Summary for Report (Include Dimensions and Depths)</h3>
+                <textarea class="text" placeholder="example" [formControl]="summary"></textarea>
+            </div>
+            <div>
+                <h3 class="label">Project Operations for Next 24 Hrs</h3>
+                <textarea class="text" placeholder="Example" [formControl]="operations"></textarea>
+            </div>
+        </div>
+    </form>
+
 </div>
-
