@@ -13,7 +13,7 @@ export class OperationalStatusComponent implements OnInit {
   public status: FormControl;
   public days: FormControl;
   public wellClass: FormControl;
-  public lengthOh: FormControl;Validators
+  public lengthOh: FormControl;
   public midnightDepth: FormControl;
   public progress: FormControl;
   public section: FormControl;
