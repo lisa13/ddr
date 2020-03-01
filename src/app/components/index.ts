@@ -7,3 +7,4 @@ export { OperationalStatusComponent } from '../components/operational-status/ope
 export { MudPumpConfigComponent } from '../components/mud-pump-config/mud-pump-config.component';
 export { PersonnelComponent } from '../components/personnel/personnel.component';
 export { GeneralRemarksComponent } from '../components/general-remarks/general-remarks.component';
+export { WellControlDpComponent } from '../components/well-control-dp/well-control-dp.component';

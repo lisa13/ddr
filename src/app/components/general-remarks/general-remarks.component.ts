@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./general-remarks.component.scss']
 })
 export class GeneralRemarksComponent implements OnInit {
-
+  public title = "General remarks".toUpperCase();
   constructor() { }
 
   ngOnInit(): void {

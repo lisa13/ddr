@@ -13,7 +13,7 @@ import { MatNativeDateModule } from "@angular/material/core";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from '@angular/material/select';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import {
   HeaderComponent,
@@ -24,8 +24,8 @@ import {
   OperationalStatusComponent,
   MudPumpConfigComponent,
   PersonnelComponent,
-  GeneralRemarksComponent
-
+  GeneralRemarksComponent,
+  WellControlDpComponent
 } from "../components";
 
 @NgModule({
@@ -39,7 +39,8 @@ import {
     OperationalStatusComponent,
     MudPumpConfigComponent,
     PersonnelComponent,
-    GeneralRemarksComponent
+    GeneralRemarksComponent,
+    WellControlDpComponent
   ],
   providers: [],
   imports: [
@@ -80,7 +81,8 @@ import {
     OperationalStatusComponent,
     MudPumpConfigComponent,
     PersonnelComponent,
-    GeneralRemarksComponent
+    GeneralRemarksComponent,
+    WellControlDpComponent
   ]
 })
 export class SharedModule { }

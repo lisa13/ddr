@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personnel.component.scss']
 })
 export class PersonnelComponent implements OnInit {
+public title = "Personnel on board".toUpperCase();
 
   constructor() { }
 
