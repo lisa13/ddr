@@ -3,3 +3,7 @@ export { HeaderComponent } from "../components/header/header.component";
 export { NavbarComponent } from "../components/navbar/navbar.component";
 export { ReportsComponent } from "../components/reports/reports.component";
 export { WellControlComponent } from '../components/well-control/well-control.component'
+export { OperationalStatusComponent } from '../components/operational-status/operational-status.component';
+export { MudPumpConfigComponent } from '../components/mud-pump-config/mud-pump-config.component';
+export { PersonnelComponent } from '../components/personnel/personnel.component';
+export { GeneralRemarksComponent } from '../components/general-remarks/general-remarks.component';

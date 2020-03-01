@@ -4,7 +4,7 @@ import { RouterModule } from "@angular/router";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from "@angular/platform-browser";
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule, FormControl } from '@angular/forms';
 
 //material modules
 import { MatIconModule } from "@angular/material/icon";
@@ -19,7 +19,12 @@ import {
   ReportsComponent,
   NavbarComponent,
   ActionsComponent,
-  WellControlComponent
+  WellControlComponent,
+  OperationalStatusComponent,
+  MudPumpConfigComponent,
+  PersonnelComponent,
+  GeneralRemarksComponent
+
 } from "../components";
 
 @NgModule({
@@ -29,7 +34,11 @@ import {
     ReportsComponent,
     NavbarComponent,
     ActionsComponent,
-    WellControlComponent
+    WellControlComponent,
+    OperationalStatusComponent,
+    MudPumpConfigComponent,
+    PersonnelComponent,
+    GeneralRemarksComponent
   ],
   providers: [],
   imports: [
@@ -38,19 +47,21 @@ import {
     BrowserAnimationsModule,
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     FlexLayoutModule,
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   exports: [
     // modules
     BrowserAnimationsModule,
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
@@ -62,7 +73,11 @@ import {
     ReportsComponent,
     NavbarComponent,
     ActionsComponent,
-    WellControlComponent
+    WellControlComponent,
+    OperationalStatusComponent,
+    MudPumpConfigComponent,
+    PersonnelComponent,
+    GeneralRemarksComponent
   ]
 })
 export class SharedModule { }

@@ -1,7 +1,7 @@
 <div class="container">
 
     <div class="header" fxLayout="row" fxLayoutAlign="space-between center">
-        <div class="title margin-left" fxFlex="70"  (click)="toggleDiv()">{{title}}</div>
+        <div class="title margin-left" fxFlex="70" (click)="toggleDiv()">{{title}}</div>
 
 
         <div class="actions margin-right" fxLayout="row" fxLayoutAlign="space-around center">
@@ -34,7 +34,7 @@
                     done_all
                 </i>
             </div>
-            <div  class="status">
+            <div class="status">
                 <i class="material-icons">
                     warning
                 </i>
@@ -42,42 +42,168 @@
         </div>
     </div>
 
-    <div class="content"  fxLayout="column" fxLayoutAlign="space-between center">
+    <form [formGroup]="wellControlForm" novalidate>
+        <div class="content margin" fxLayout="column" fxLayoutAlign="space-between center">
 
-        <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
-            <div>1</div>
-            <div>2</div>
-        </div>
 
-        <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
-            <div>1</div>
-            <div>2</div>
-        </div>
+            <!-- first row    -->
+            <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Date BOP Test</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="bopTest" />
+                    </mat-form-field>
+                </div>
 
-        <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-        </div>
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Date Function Test</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="functionTest" />
+                    </mat-form-field>
+                </div>
+            </div>
 
-        <div class="full-width" fxLayout="row" fxLayoutAlign="space-between center">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-        </div>
 
-        <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-        </div>
+            <!-- second row -->
+            <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Date Last Working Pressure Test (6 monthly test)</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="pressureTest" />
+                    </mat-form-field>
+                </div>
 
-        <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
-            <div>1</div>
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Days to Next Working Pressure Test</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="nextTest" />
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+            <!-- third row -->
+            <div class="full-width" fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Crew 1</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="firstCrew" />
+                    </mat-form-field>
+                </div>
+
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Date Choke Drill</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="chokeDrill" [matDatepicker]="picker1" />
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Date Kick Drill</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="kickDrill" [matDatepicker]="picker2" />
+                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Date Pit Drill</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="pitDrill" [matDatepicker]="picker3" />
+                        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                        <mat-datepicker #picker3></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+            <!-- fourth row -->
+            <div class=" underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Crew 2</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="secondCrew" />
+                    </mat-form-field>
+                </div>
+
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Date Choke Drill</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="secondChokedrill" [matDatepicker]="picker4" />
+                        <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                        <mat-datepicker #picker4></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Date Kick Drill</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="secondKickDrill" [matDatepicker]="picker5" />
+                        <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+                        <mat-datepicker #picker5></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Date Pit Drill</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="secondPitDrill" [matDatepicker]="picker6" />
+                        <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
+                        <mat-datepicker #picker6></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+            <!-- fifth row -->
+            <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Choke Manifold</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="chokeManifold" [matDatepicker]="picker7" />
+                        <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
+                        <mat-datepicker #picker7></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Standpipe Manifold</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="standPipe" [matDatepicker]="picker8" />
+                        <mat-datepicker-toggle matSuffix [for]="picker8"></mat-datepicker-toggle>
+                        <mat-datepicker #picker8></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Top Drive IBOP's</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="topDrive" [matDatepicker]="picker9" />
+                        <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
+                        <mat-datepicker #picker9></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Loose Kelly Cocks</h3>
+                    <mat-form-field appearance="none" class="text datepicker no-padding">
+                        <input matInput [formControl]="looseKelly" [matDatepicker]="picker10" />
+                        <mat-datepicker-toggle matSuffix [for]="picker10"></mat-datepicker-toggle>
+                        <mat-datepicker #picker10></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+            <!-- sixth row -->
+            <div class="underlined full-width" fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="change-date" fxLayout="column" fxLayoutAlign="end start">
+                    <h3 class="label">Loose Kelly Cocks</h3>
+                    <textarea class="text" matInput [formControl]="summary"></textarea>
+                </div>
+                <div class="text">Mark as complete</div>
+            </div>
         </div>
-    </div>
+    </form>
 
 </div>
