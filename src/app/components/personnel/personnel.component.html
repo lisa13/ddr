@@ -2,5 +2,67 @@
     <div class="header" fxLayout="row" fxLayoutAlign="start center">
         <div class="title padding" fxFlex="100">{{title}}</div>
     </div>
-</div>
 
+
+    <div class="content margin" fxLayout="column" fxLayoutAlign="start start">
+
+        <div fxLayout="row" fxLayoutAlign=" center">
+            <div class="crew" fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">Crew 1</h3>
+                <mat-form-field appearance="none" class="text select">
+                    <select matNativeControl required>
+                        <option value="volvo">A05</option>
+                        <option value="saab">A03</option>
+                    </select>
+                </mat-form-field>
+            </div>
+
+            <div class="crew" fxLayout="column" fxLayoutAlign="end start">
+                <h3 class="label">Crew 2</h3>
+                <mat-form-field appearance="none" class="text select">
+                    <select matNativeControl required>
+                        <option value="volvo">A04</option>
+                        <option value="saab">A02</option>
+                    </select>
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="space-evenly center">
+
+            <!-- left column -->
+            <div class="leaders" fxLayout="column" fxLayoutAlign="end start">
+                <div class="heading" fxLayout="row" fxLayoutAlign="start center">
+                    <div class="label">Leaders</div>
+                    <div> - </div>
+                </div>
+
+                <div *ngFor="let leader of leaders" class="padding underlined" fxLayout="row"
+                    fxLayoutAlign="start center">
+                    <div class="label">{{leader.role}}</div>
+                    <div class="text">{{leader.name}}</div>
+                </div>
+            </div>
+
+            <!-- right column -->
+            <div class="personel" fxLayout="column" fxLayoutAlign="end start">
+                <div class="heading label" fxLayout="row" fxLayoutAlign="start center">
+                    <div>Personel Category</div>
+                    <div>Day</div>
+                    <div>Night</div>
+                    <div>Total</div>
+                </div>
+
+                <div *ngFor="let report of reports" class="padding label underlined" fxLayout="row"
+                    fxLayoutAlign="start center">
+                    <div>{{report.category}}</div>
+                    <div class="text">{{report.day}}</div>
+                    <div class="text">{{report.night}}</div>
+                    <div class="text">{{report.total}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

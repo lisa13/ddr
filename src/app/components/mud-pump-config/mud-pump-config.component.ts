@@ -28,7 +28,7 @@ export class MudPumpConfigComponent implements OnInit {
     this.output = new FormControl('22,17');
     this.pressure = new FormControl('01.06.2019');
     this.linerSize = new FormControl('-');
-    this.rentOutput = new FormControl('.');
+    this.rentOutput = new FormControl('-');
     this.rentPressure = new FormControl('-');
 
     this.createFormGroup();

@@ -6,7 +6,7 @@
 
 <div class="content margin" fxLayout="column" fxLayoutAlign="space-between center">
 
-    <div class="full-width heading" fxLayout="row" fxLayoutAlign="space-evenly center">
+    <div class="full-width heading label" fxLayout="row" fxLayoutAlign="space-evenly center">
         <div></div>
         <div>Liner size (Inch)</div>
         <div>%Efficiency</div>
@@ -17,7 +17,7 @@
 
     <form [formGroup]="mudPumpConfigForm" class="full-width" novalidate>
         <div fxLayout="row" fxLayoutAlign="space-evenly center">
-            <div>Mud pump #1</div>
+            <div class="label">Mud pump #1</div>
             <div class="rep-number">
                 <mat-form-field appearance="none" class="text select">
                     <select matNativeControl required>
@@ -52,7 +52,7 @@
 
 
         <div fxLayout="row" fxLayoutAlign="space-evenly center">
-            <div>Rental Pump</div>
+            <div class="label">Rental Pump</div>
             <div>
                 <mat-form-field class="text" appearance="none">
                     <input matInput [formControl]="linerSize">

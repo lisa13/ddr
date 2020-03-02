@@ -2,9 +2,7 @@
 @import "../../../../src/assets/fonts.scss";
 
 .container {
-  height: 55px;
   margin: 0 1rem 0 1rem;
-  
 
   .header {
     background: $primary_bg;
@@ -13,6 +11,15 @@
     .title {
       cursor: pointer;
     }
-   
+  }
+
+  .leaders {
+    width: 60%;
+    min-width: 350px;
+  }
+
+  .personel {
+    width: 40%;
+    min-width: 350px;
   }
 }
