@@ -7,7 +7,7 @@
     <div class="content" fxLayout="column" fxLayoutAlign="start start">
         <div class="full-width" fxLayout="column">
 
-            <div fxFlex="100" class=" heading underlined" fxLayout="row">
+            <div fxFlex="100" class=" heading underlined" fxLayout="row" fxLayoutAlign="start center">
                 <div fxFlex="50">
                     <h3 class="label">Jar</h3>
                 </div>
@@ -19,15 +19,15 @@
                 </div>
             </div>
 
-            <div fxFlex="100" class=" heading undelined" fxLayout="row">
+            <div fxFlex="100" class="info underlined " fxLayout="row">
 
-                <div fxFlex="20">
+                <div fxFlex="16" class="no-border ">
                     <h3 class="label">Serial Number</h3>
                     <span class="text">{{number}}</span>
                 </div>
 
                 <div fxFlex="30">
-                    <h3 class="label">Accounted Hours</h3>
+                    <h3 class="label margin-left">Accounted Hours</h3>
                     <div fxLayout="row" class="no-border">
                         <h3 class="label">On btm</h3>
                         <span class="text">{{btm}}</span>
@@ -36,9 +36,9 @@
                     </div>
                 </div>
 
-                <div fxFlex="30">
-                    <h3 class="label">Accounted Hours</h3>
-                    <div fxLayout="row" class="no-border">
+                <div class="accounted-hours" fxFlex="30">
+                    <h3 class="label margin-left">Accounted Hours</h3>
+                    <div fxLayout="row" class="no-border ">
                         <h3 class="label">On btm</h3>
                         <span class="text">{{btm}}</span>
                         <h3 class="label">On Pumping</h3>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
 
-                <div fxFlex="20" class="label">
+                <div fxFlex="20" class="label no-border">
                     <mat-radio-group aria-label="Select an option" color="primary" fxLayout="row"
                         fxLayoutAlign="start center">
                         <mat-radio-button value="1">Tons & Miles</mat-radio-button>

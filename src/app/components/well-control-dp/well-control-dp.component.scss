@@ -29,14 +29,35 @@
         border-right: 1px solid $underline;
       }
     }
+
+    .info {
+      height: 60px;
+      div {
+        height: inherit;
+        margin-left: 1rem;
+        border-right: 1px solid $underline;
+      }
+
+      span{
+        padding: 0 5px 0 5px;
+      }
+    }
+
+    .accounted-hours{
+      max-width: 200px;
+    }
   }
 }
 
 .no-border {
-  border: none!important;
+  border: none !important;
 }
 
+
+//overriding materil radio
+
 :host ::ng-deep .mat-radio-container {
+  margin-top: 5px;
   height: 15px;
   width: 15px;
 }
