@@ -1,10 +1,10 @@
 <div class="container">
-    <div class="header" fxLayout="row" fxLayoutAlign="start center">
+    <div class="header" fxLayout="row" fxLayoutAlign="start center" (click)="toggleDiv()">
         <div class="title padding" fxFlex="100">{{title}}</div>
     </div>
 
 
-    <div class="content" fxLayout="column" fxLayoutAlign="start start">
+    <div *ngIf="toggle" class="content" fxLayout="column" fxLayoutAlign="start start">
         <div fxLayout="row" fxLayoutAlign=" center">
             <div class="crew margin" fxLayout="column" fxLayoutAlign="end start">
                 <h3 class="label">Crew 1</h3>

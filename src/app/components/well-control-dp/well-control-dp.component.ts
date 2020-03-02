@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WellControlDpComponent implements OnInit {
   public title = 'Well control'.toUpperCase();
+  public toggle: boolean;
 
-  public number ='34-RFT-45';
+  public number = '34-RFT-45';
   public btm = '46';
   public pumping = '36';
   public tons = '5067';
@@ -16,6 +17,11 @@ export class WellControlDpComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  
+  public toggleDiv() {
+    this.toggle = !this.toggle;
   }
 
 }

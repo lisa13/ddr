@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonnelComponent implements OnInit {
   public title = "Personnel on board".toUpperCase();
+  public toggle: boolean;
 
   public leaders = [
     {
@@ -107,6 +108,11 @@ export class PersonnelComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+
+  public toggleDiv() {
+    this.toggle = !this.toggle;
   }
 
 }

@@ -15,15 +15,7 @@
 
   .content {
     margin: 1rem;
-    min-width: 1200px;
-    @media only screen and (max-width: 1200px) {
-     
-      white-space: nowrap;
-      position: relative;
-      overflow-y: hidden;
-      overflow-x: scroll;
-      -webkit-overflow-scrolling: touch;
-    }
+   
 
     div {
       max-width: 80%;

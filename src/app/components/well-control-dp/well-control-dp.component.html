@@ -1,10 +1,10 @@
 <div class="container">
-    <div class="header" fxLayout="row" fxLayoutAlign="start center">
+    <div class="header" fxLayout="row" fxLayoutAlign="start center" (click)="toggleDiv()">
         <div class="title padding" fxFlex="100">{{title}}</div>
     </div>
 
 
-    <div class="content" fxLayout="column" fxLayoutAlign="start start">
+    <div *ngIf="toggle" class="content" fxLayout="column" fxLayoutAlign="start start">
         <div class="full-width" fxLayout="column">
 
             <div fxFlex="100" class=" heading underlined" fxLayout="row" fxLayoutAlign="start center">
@@ -20,7 +20,6 @@
             </div>
 
             <div fxFlex="100" class="info underlined " fxLayout="row">
-
                 <div fxFlex="16" class="no-border ">
                     <h3 class="label">Serial Number</h3>
                     <span class="text">{{number}}</span>
@@ -54,7 +53,6 @@
                     </mat-radio-group>
                     <span class="text">{{tons}}</span>
                 </div>
-
             </div>
         </div>
     </div>

@@ -8,6 +8,10 @@
   .header {
     background: $primary_bg;
     color: #fff;
+
+    .title {
+      cursor: pointer;
+    }
   }
 
   .content {

@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GeneralRemarksComponent implements OnInit {
   public title = "General remarks".toUpperCase();
+  public toggle: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public toggleDiv() {
+    this.toggle = !this.toggle;
   }
 
 }

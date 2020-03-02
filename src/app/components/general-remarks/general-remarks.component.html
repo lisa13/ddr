@@ -1,9 +1,9 @@
 <div class="container">
-    <div class="header" fxLayout="row" fxLayoutAlign="start center">
+    <div class="header" fxLayout="row" fxLayoutAlign="start center" (click)="toggleDiv()">
         <div class="title padding" fxFlex="100">{{title}}</div>
     </div>
 
-    <div class="content" fxLayout="row">
+    <div *ngIf="toggle" class="content" fxLayout="row">
         <div fxFlex="80">
             <textarea class="text full-width" placeholder="SOME REMARKS"></textarea>
         </div>
