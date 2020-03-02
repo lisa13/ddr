@@ -4,10 +4,9 @@
     </div>
 
 
-    <div class="content margin" fxLayout="column" fxLayoutAlign="start start">
-
+    <div class="content" fxLayout="column" fxLayoutAlign="start start">
         <div fxLayout="row" fxLayoutAlign=" center">
-            <div class="crew" fxLayout="column" fxLayoutAlign="end start">
+            <div class="crew margin" fxLayout="column" fxLayoutAlign="end start">
                 <h3 class="label">Crew 1</h3>
                 <mat-form-field appearance="none" class="text select">
                     <select matNativeControl required>
@@ -17,7 +16,7 @@
                 </mat-form-field>
             </div>
 
-            <div class="crew" fxLayout="column" fxLayoutAlign="end start">
+            <div class="crew margin" fxLayout="column" fxLayoutAlign="start start">
                 <h3 class="label">Crew 2</h3>
                 <mat-form-field appearance="none" class="text select">
                     <select matNativeControl required>
@@ -26,40 +25,37 @@
                     </select>
                 </mat-form-field>
             </div>
-
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="space-evenly center">
 
+        <div class="team" fxLayout="row" fxLayoutAlign="start" fxLayout.xs="column" fxLayout.sm="column">
             <!-- left column -->
-            <div class="leaders" fxLayout="column" fxLayoutAlign="end start">
-                <div class="heading" fxLayout="row" fxLayoutAlign="start center">
-                    <div class="label">Leaders</div>
-                    <div> - </div>
+            <div class="leaders" fxLayout="column" fxFlex.xs="100" fxFlex.sm="100">
+                <div  fxLayout="row">
+                    <div class="heading label margin-left">Leaders</div>
+                    <div class="heading"> </div>
                 </div>
-
-                <div *ngFor="let leader of leaders" class="padding underlined" fxLayout="row"
-                    fxLayoutAlign="start center">
+                <div *ngFor="let leader of leaders" class="margin-left padding underlined" fxLayout="row">
                     <div class="label">{{leader.role}}</div>
-                    <div class="text">{{leader.name}}</div>
+                    <div class="text padding-left">{{leader.name}}</div>
                 </div>
             </div>
 
             <!-- right column -->
-            <div class="personel" fxLayout="column" fxLayoutAlign="end start">
-                <div class="heading label" fxLayout="row" fxLayoutAlign="start center">
-                    <div>Personel Category</div>
-                    <div>Day</div>
-                    <div>Night</div>
-                    <div>Total</div>
+            <div class="personel" fxLayout="column" fxFlex.xs="100" fxFlex.sm="100">
+                <div class="label" fxLayout="row">
+                    <div class="margin-left heading" fxFlex="50">Personel Category</div>
+                    <div class="heading" fxFlex="15">Day</div>
+                    <div class="heading" fxFlex="15">Night</div>
+                    <div class="heading" fxFlex="15">Total</div>
                 </div>
-
-                <div *ngFor="let report of reports" class="padding label underlined" fxLayout="row"
-                    fxLayoutAlign="start center">
-                    <div>{{report.category}}</div>
-                    <div class="text">{{report.day}}</div>
-                    <div class="text">{{report.night}}</div>
-                    <div class="text">{{report.total}}</div>
+                <div *ngFor="let report of reports" class="margin-left padding label underlined" fxLayout="row"
+                    fxLayoutAlign="space-between center" [ngClass]="{
+                        'grey': report.grey === true}">
+                    <div fxFlex="50">{{report.category}}</div>
+                    <div fxFlex="10" class="text">{{report.day}}</div>
+                    <div fxFlex="10" class="text">{{report.night}}</div>
+                    <div fxFlex="10" class="text">{{report.total}}</div>
                 </div>
             </div>
         </div>

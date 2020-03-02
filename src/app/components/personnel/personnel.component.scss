@@ -13,13 +13,45 @@
     }
   }
 
-  .leaders {
-    width: 60%;
-    min-width: 350px;
+  .content {
+    margin: 1rem;
+    width: 80%;
+
+    .heading {
+      padding: 0.9rem;
+      background: rgb(221, 232, 241);
+      border-right: 2px solid #fff;
+    }
+
+    .team {
+      width: 100%;
+
+      .leaders {
+        width: 60%;
+        margin-right: 3rem;
+        div {
+          width: 100%;
+        }
+        @media only screen and (max-width: 999px) {
+          width: 80%;
+        }
+      }
+
+      .personel {
+        width: 40%;
+        div {
+          width: 100%;
+        }
+
+        @media only screen and (max-width: 999px) {
+          margin-top: 2rem;
+          width: 80%;
+        }
+      }
+    }
   }
 
-  .personel {
-    width: 40%;
-    min-width: 350px;
+  .grey {
+    background: $textarea;
   }
 }

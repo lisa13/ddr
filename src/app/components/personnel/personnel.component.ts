@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonnelComponent implements OnInit {
   public title = "Personnel on board".toUpperCase();
+  
   public leaders = [
     {
       role: 'Drilling Superintendent',
@@ -79,7 +80,8 @@ export class PersonnelComponent implements OnInit {
       category: 'Sum KCAD Crew',
       day: '17',
       night: '13',
-      total: '30'
+      total: '30',
+      grey: true
     },
     {
       category: '-',
@@ -97,7 +99,8 @@ export class PersonnelComponent implements OnInit {
       category: 'Sum',
       day: '17',
       night: '13',
-      total: '30'
+      total: '30',
+      grey: true
     }
   ];
 
