@@ -4,15 +4,13 @@
 .container {
   height: 55px;
   margin: 0 1rem 0 1rem;
-  
 
   .header {
     background: $primary_bg;
     color: #fff;
+  }
 
-    .title {
-      cursor: pointer;
-    }
-   
+  .content {
+    margin: 1rem;
   }
 }
