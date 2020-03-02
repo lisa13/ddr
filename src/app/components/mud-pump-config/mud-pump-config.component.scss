@@ -2,9 +2,7 @@
 @import "../../../../src/assets/fonts.scss";
 
 .container {
-  height: 55px;
   margin: 0 1rem 0 1rem;
-  
 
   .header {
     background: $primary_bg;
@@ -13,6 +11,23 @@
     .title {
       cursor: pointer;
     }
-   
+  }
+
+  .content {
+    width: 80%;
+
+    .heading {
+      height: 50px;
+      background: rgb(221, 232, 241);
+      div {
+        padding: 0.8rem;
+        height: inherit;
+        border-right: 2px solid #fff;
+      }
+    }
+
+    .no-border {
+      border: none !important;
+    }
   }
 }

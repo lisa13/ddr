@@ -1,84 +1,86 @@
 <div class="container">
-    <div class="header" fxLayout="row" fxLayoutAlign="start center">
+    <div class="header" fxLayout="row" fxLayoutAlign="start center" (click)="toggleDiv()">
         <div class="title padding" fxFlex="100">{{title}}</div>
     </div>
-</div>
 
-<div class="content margin" fxLayout="column" fxLayoutAlign="space-between center">
+    <div *ngIf="toggle" class="content margin" fxLayout="column">
 
-    <div class="full-width heading label" fxLayout="row" fxLayoutAlign="space-evenly center">
-        <div></div>
-        <div>Liner size (Inch)</div>
-        <div>%Efficiency</div>
-        <div>Output (Ltr/Stroke)</div>
-        <div>Pressure (bar)</div>
-    </div>
+        <div class="full-width heading label" fxLayout="row" fxLayoutAlign="start center">
+            <div fxFlex="20"></div>
+            <div fxFlex="20">Liner size (Inch)</div>
+            <div fxFlex="20">%Efficiency</div>
+            <div fxFlex="20">Output (Ltr/Stroke)</div>
+            <div fx class="no-border">Pressure (bar)</div>
+        </div>
+        
     
-
-    <form [formGroup]="mudPumpConfigForm" class="full-width" novalidate>
-        <div fxLayout="row" fxLayoutAlign="space-evenly center">
-            <div class="label">Mud pump #1</div>
-            <div class="rep-number">
-                <mat-form-field appearance="none" class="text select">
-                    <select matNativeControl required>
-                        <option value="test1">6 1/2"</option>
-                        <option value="test2">7 1/2"</option>
-                    </select>
-                </mat-form-field>
+        <form [formGroup]="mudPumpConfigForm" class="full-width" novalidate>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <div fxFlex="20" class="label margin-left">Mud pump #1</div>
+                <div fxFlex="20"class="rep-number">
+                    <mat-form-field appearance="none" class="text select">
+                        <select matNativeControl required>
+                            <option value="test1">6 1/2"</option>
+                            <option value="test2">7 1/2"</option>
+                        </select>
+                    </mat-form-field>
+                </div>
+    
+    
+                <div fxFlex="20" class="rep-number">
+                    <mat-form-field appearance="none" class="text select">
+                        <select matNativeControl required>
+                            <option value="test1">97,0</option>
+                            <option value="test2">98,0</option>
+                        </select>
+                    </mat-form-field>
+                </div>
+    
+                <div fxFlex="20">
+                    <mat-form-field class="text" appearance="none">
+                        <input matInput [formControl]="output">
+                    </mat-form-field>
+                </div>
+    
+                <div fxFlex="20">
+                    <mat-form-field class="text" appearance="none">
+                        <input matInput [formControl]="pressure">
+                    </mat-form-field>
+                </div>
             </div>
-
-
-            <div class="rep-number">
-                <mat-form-field appearance="none" class="text select">
-                    <select matNativeControl required>
-                        <option value="test1">97,0</option>
-                        <option value="test2">98,0</option>
-                    </select>
-                </mat-form-field>
+    
+    
+            <div class="grey" fxLayout="row" fxLayoutAlign="space-between center">
+                <div fxFlex="20" class="label margin-left">Rental Pump</div>
+                <div fxFlex="20">
+                    <mat-form-field class="text" appearance="none">
+                        <input matInput [formControl]="linerSize">
+                    </mat-form-field>
+                </div>
+    
+                <div fxFlex="20">
+                    <mat-form-field appearance="none" class="text select">
+                        <select matNativeControl required>
+                            <option value="test1">96,5</option>
+                            <option value="test2">97,5</option>
+                        </select>
+                    </mat-form-field>
+                </div>
+    
+                <div fxFlex="20">
+                    <mat-form-field class="text" appearance="none">
+                        <input matInput [formControl]="rentOutput">
+                    </mat-form-field>
+                </div>
+    
+                <div fxFlex="20">
+                    <mat-form-field class="text" appearance="none">
+                        <input matInput [formControl]="rentPressure">
+                    </mat-form-field>
+                </div>
             </div>
+        </form>
+    </div>
 
-            <div>
-                <mat-form-field class="text" appearance="none">
-                    <input matInput [formControl]="output">
-                </mat-form-field>
-            </div>
-
-            <div>
-                <mat-form-field class="text" appearance="none">
-                    <input matInput [formControl]="pressure">
-                </mat-form-field>
-            </div>
-        </div>
-
-
-        <div fxLayout="row" fxLayoutAlign="space-evenly center">
-            <div class="label">Rental Pump</div>
-            <div>
-                <mat-form-field class="text" appearance="none">
-                    <input matInput [formControl]="linerSize">
-                </mat-form-field>
-            </div>
-
-            <div>
-                <mat-form-field appearance="none" class="text select">
-                    <select matNativeControl required>
-                        <option value="test1">96,5</option>
-                        <option value="test2">97,5</option>
-                    </select>
-                </mat-form-field>
-            </div>
-
-            <div>
-                <mat-form-field class="text" appearance="none">
-                    <input matInput [formControl]="rentOutput">
-                </mat-form-field>
-            </div>
-
-            <div>
-                <mat-form-field class="text" appearance="none">
-                    <input matInput [formControl]="rentPressure">
-                </mat-form-field>
-            </div>
-        </div>
-    </form>
 </div>
+

@@ -48,11 +48,17 @@ html {
   color: $grey_medium;
 }
 
+.grey {
+  background: $textarea;
+}
+
+
+
 textarea {
   background: $textarea;
   height: 200px;
   border: 1px solid $underline;
-  padding: .5rem;
+  padding: 0.5rem;
   margin: 1rem 0 0 0;
 }
 

@@ -7,10 +7,12 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
   templateUrl: './well-control.component.html',
   styleUrls: ['./well-control.component.scss']
 })
+
 export class WellControlComponent implements OnInit {
   public title = "Well Control".toUpperCase();
   public toggle: boolean;
-  public dt =  new Date().toISOString().split('T')[0];
+  public checked: boolean;
+  public dt = new Date().toISOString().split('T')[0];
   public wellControlForm: FormGroup;
   public bopTest: FormControl;
   public pressureTest: FormControl;
@@ -37,6 +39,7 @@ export class WellControlComponent implements OnInit {
 
   ngOnInit(): void {
     this.createFormControls();
+    this.checked = false;
   }
 
   public toggleDiv() {
@@ -85,6 +88,16 @@ export class WellControlComponent implements OnInit {
       looseKelly: this.looseKelly,
       summary: this.summary
     });
+  }
+
+  public onChange(e): void {
+    if (e.checked === true) {
+      this.checked = true;
+      console.log(this.checked)
+    } else {
+      this.checked = false;
+      console.log(this.checked)
+    }
   }
 
 }

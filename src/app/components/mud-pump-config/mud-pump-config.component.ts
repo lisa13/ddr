@@ -8,6 +8,8 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 })
 export class MudPumpConfigComponent implements OnInit {
   public title = "mud pump configuration".toUpperCase();
+  public toggle: boolean;
+
   public mudPumpConfigForm: FormGroup;
   public output: FormControl;
   public pressure: FormControl;
@@ -43,5 +45,9 @@ export class MudPumpConfigComponent implements OnInit {
       rentOutput: this.rentOutput,
       rentPressure: this.rentPressure,
     });
+  }
+
+  public toggleDiv() {
+    this.toggle = !this.toggle;
   }
 }

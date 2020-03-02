@@ -8,8 +8,9 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 })
 export class OperationalStatusComponent implements OnInit {
   public title = "operational status".toUpperCase();
-  public operationalStatusForm: FormGroup;
+  public toggle: boolean;
 
+  public operationalStatusForm: FormGroup;
   public status: FormControl;
   public days: FormControl;
   public wellClass: FormControl;
@@ -77,4 +78,7 @@ export class OperationalStatusComponent implements OnInit {
     });
   }
 
+  public toggleDiv() {
+    this.toggle = !this.toggle;
+  }
 }
