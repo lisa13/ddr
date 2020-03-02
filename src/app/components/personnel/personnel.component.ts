@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonnelComponent implements OnInit {
   public title = "Personnel on board".toUpperCase();
-  
+
   public leaders = [
     {
       role: 'Drilling Superintendent',

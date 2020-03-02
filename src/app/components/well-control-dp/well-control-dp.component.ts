@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./well-control-dp.component.scss']
 })
 export class WellControlDpComponent implements OnInit {
+  public title = 'Well control'.toUpperCase();
+
+  public number ='34-RFT-45';
+  public btm = '46';
+  public pumping = '36';
+  public tons = '5067';
 
   constructor() { }
 

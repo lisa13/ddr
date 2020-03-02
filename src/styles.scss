@@ -48,7 +48,15 @@ html {
   color: $grey_medium;
 }
 
-.primary{
+textarea {
+  background: $textarea;
+  height: 200px;
+  border: 1px solid $underline;
+  padding: .5rem;
+  margin: 1rem 0 0 0;
+}
+
+.primary {
   color: $primary_color;
 }
 
@@ -66,7 +74,7 @@ html {
   margin: 0;
 }
 
-.no-padding{
+.no-padding {
   padding: 0;
 }
 
@@ -128,4 +136,5 @@ mat-form-field {
     }
   }
 }
+
 

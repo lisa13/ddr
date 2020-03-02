@@ -1,0 +1,50 @@
+@import "../../../../src/assets/colors.scss";
+@import "../../../../src/assets/fonts.scss";
+
+.container {
+  margin: 0 1rem 0 1rem;
+
+  .header {
+    background: $primary_bg;
+    color: #fff;
+
+    .title {
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    margin: 1rem;
+    width: 100%;
+
+    div {
+      max-width: 90%;
+    }
+
+    .heading {
+      height: 30px;
+      div {
+        height: inherit;
+        margin-left: 1rem;
+        border-right: 1px solid $underline;
+      }
+    }
+  }
+}
+
+.no-border {
+  border: none!important;
+}
+
+:host ::ng-deep .mat-radio-container {
+  height: 15px;
+  width: 15px;
+}
+:host ::ng-deep .mat-radio-outer-circle {
+  height: 15px;
+  width: 15px;
+}
+:host ::ng-deep .mat-radio-inner-circle {
+  height: 15px;
+  width: 15px;
+}
